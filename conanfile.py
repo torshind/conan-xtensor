@@ -3,7 +3,7 @@ from conans import ConanFile, CMake, tools
 
 class XtensorConan(ConanFile):
     name = "xtensor"
-    version = "0.20.4"
+    version = "0.20.7"
     license = "BSD 3-Clause"
     url = "http://quantstack.net/xtensor"
     description = "C++ tensors with broadcasting and lazy computing"
@@ -12,8 +12,8 @@ class XtensorConan(ConanFile):
     default_options = {"shared": False}
     generators = "cmake_find_package"
     exports_sources = "*"
-    requires = "xtl/0.6.3@mdm/testing", \
-               "xsimd/7.1.3@mdm/testing"
+    requires = "xtl/0.6.4@mdm/testing", \
+               "xsimd/7.2.2@mdm/testing"
 
     def source(self):
         git = tools.Git()
